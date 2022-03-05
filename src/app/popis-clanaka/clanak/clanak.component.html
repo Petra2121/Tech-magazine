@@ -1,0 +1,240 @@
+<!--
+<mat-sidenav-container class="sidenav-container">
+
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]=" false">
+      
+      <mat-toolbar color="primary">Menu</mat-toolbar>
+
+      <mat-nav-list>
+        <a mat-list-item href="#">O nama</a>
+        <hr>
+        <a mat-list-item href="#">Naslovna</a>
+        <hr>
+        <a mat-list-item href="#">TEME:</a>
+        <a mat-list-item (click)="novaKomponenta(Smartphones)">&nbsp; &nbsp; Smartphones</a>
+        <a mat-list-item (click)="novaKomponenta(c)">&nbsp; &nbsp;Virtual Reality</a>
+        <a mat-list-item (click)="novaKomponenta(b)">&nbsp; &nbsp;Artificial Intelligence</a>
+        <a mat-list-item (click)="novaKomponenta(d)">&nbsp; &nbsp;Software</a>
+        <hr>
+        <a mat-list-item href="#">Istaknuti događaji</a>
+        <a mat-list-item href="#">Kontakt</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content> 
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span  style="font-size: 32px; padding-left:450px; 
+        text-transform: uppercase; font-family: 'Courier New', Courier, monospace; font-weight:bold; letter-spacing: 4px;">
+        Tech Časopis</span>
+        <span class="spacer"></span>
+
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="Prijava()"
+          *ngIf ="!username">
+          <mat-icon aria-label="Side nav toggle icon">account_circle</mat-icon> </button>
+
+          <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="Odjava()"
+          *ngIf ="username">
+          <mat-icon aria-label="Side nav toggle icon">power_settings_new</mat-icon> </button>
+      </mat-toolbar>
+    
+       
+
+      <ng-content></ng-content>
+      <p>clanak works!</p>
+
+    </mat-sidenav-content> 
+</mat-sidenav-container> -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<mat-sidenav-container class="sidenav-container">
+
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]=" false">
+      
+      <mat-toolbar color="primary">Menu</mat-toolbar>
+
+      <mat-nav-list>
+        <a mat-list-item href="#">O nama</a>
+        <hr>
+        <a mat-list-item href="#">Naslovna</a>
+        <hr>
+        <a mat-list-item href="#">TEME:</a>
+        <a mat-list-item (click)="novaKomponenta(Smartphones)">&nbsp; &nbsp; Smartphones</a>
+        <a mat-list-item (click)="novaKomponenta(c)">&nbsp; &nbsp;Virtual Reality</a>
+        <a mat-list-item (click)="novaKomponenta(b)">&nbsp; &nbsp;Artificial Intelligence</a>
+        <a mat-list-item (click)="novaKomponenta(d)">&nbsp; &nbsp;Software</a>
+        <hr>
+        <a mat-list-item href="#">Istaknuti događaji</a>
+        <a mat-list-item href="#">Kontakt</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content> 
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span  style="font-size: 32px; padding-left:450px; 
+        text-transform: uppercase; font-family: 'Courier New', Courier, monospace; font-weight:bold; letter-spacing: 4px;">
+        Tech Časopis</span>
+        <span class="spacer"></span>
+
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="Prijava()"
+          *ngIf ="!username">
+          <mat-icon aria-label="Side nav toggle icon">account_circle</mat-icon> </button>
+
+          <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="Odjava()"
+          *ngIf ="username">
+          <mat-icon aria-label="Side nav toggle icon">power_settings_new</mat-icon> </button>
+      </mat-toolbar>
+    
+      <!-- Add Content Here -->
+      <ng-content></ng-content>
+      
+
+  <!-- The flexible grid (content) -->
+  <div class="row">
+    <div class="side">
+     <h1>This Text Adventure Game Feels Like a Lucid Dream</h1>
+     <p class="entry-content">Artificial intelligence isn’t just for dystopian algorithms; it also makes for creative entertainment, like when this AI wrote beginning sentences for a bunch of nonexistent novels. Now, an AI stands ready to guide you through an old school text adventure game, a game that doesn’t exist until you start trying to play it. </p>  
+     <p class="entry-content">The AI knows how these stories tend to go. If you type “open door,” it will either tell you that it’s locked or it will open the door and describe the room inside. If you try to speak to the innkeeper, it will tell you how the conversation goes. </p> 
+     <p class="entry-content">When you play AI Dungeon 2 you are in the role of the player, but you also have all the creativity of being the dungeon master. Want to hop on an owl and fly away, shortcutting the trek to the castle up on the mountain? I did. It’s like lucid dreaming. No matter how creative or unexpected an action you take, the story gives you a “yes, and.” </p>  
+    
+     <p class="entry-content bottom">Best of all, it runs on your phone (the original AI Dungeon was a web based game that took forever to load) so you can play it a little bit at a time, whenever you have a spare minute. It’s free on iOS and Android. </p>   
+      <h5 class="author">Autor: Beth Skwarecki</h5>
+      <h5 class="date">20.01.2020.</h5>
+      <br>
+
+     <!--ZVJEZDICE-->
+    
+
+      <h2 class="kom-naz">KOMENTARI:</h2>
+
+      <p class="kom1">ivanlevanic</p>
+      <p class="kom2">Predivno, ali i ružno! Sramite se... Čestitke!</p> 
+  
+      <ul *ngFor="let nesto of arrayName"> 
+        <p class="kom1">mihaelawang</p>
+        <p class="kom2">{{nesto.comment}}</p>            
+      </ul> 
+
+      <!--DIO ZA KOMENTARE-->
+      
+      <div class="p-1 col-xl-10"> 
+<!--
+        <form class="was-validated form-inline" #namesForm="ngForm"> 
+          <div class="form-group"> 
+            <input [(ngModel)] = "newName" type="text" class="form-control" id="uname" placeholder="  Korisničko ime" name="uname" required> 
+            <div class="valid-feedback">OK</div> 
+            <div class="invalid-feedback">Please fill out this field.</div> 
+          </div>
+        </form> -->
+
+        <form class="form-horizontal was-validated" #commentForm="ngForm"> 
+          <div class="form-group"> 
+              <div class="col-xl-11" style="padding: 10px 0px 0px 0px;"> 
+                <textarea [(ngModel)] = "newComment" class="form-control" rows="3" id="comment" placeholder="  Ovdje unesi komentar..." name="comment" required></textarea> 
+                <div class="valid-feedback">OK</div> 
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+          </div> 
+        </form>
+
+        <form class="form-horizontal"> 
+          <div class="form-group"> 
+            <div class="col-lg-10" style="width: 100%;"> 
+                <button [disabled]="commentForm.form.invalid" type="submit" class="btn btn-outline-dark btn-block" (click) = "pushItem()" >Komentiraj</button> 
+            </div> 
+          </div>
+        </form>
+   
+      </div>
+     <!--KRAJ DIJELA ZA KOMENTARE-->
+  </div>
+  
+  <div class="main">
+    <h5 class="opisslike">Image: Shutterstock, Jan 20, 2020.</h5>
+    <img src="https://i.kinja-img.com/gawker-media/image/upload/gnsczwomgr3u74v5a2tr.jpg">
+  </div>
+
+</div>   
+
+
+    <!--footer-->
+
+    <footer>
+      <hr>
+      <div class="footer-main-div" >
+        
+        <div class="footer-social-icons">
+          <ul>
+            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-snapchat-ghost"></i></a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-menu-one" >
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-menu-two">
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-bottom">
+          <p> Sponsored by: <a href="https://www.fesb.unist.hr/"> FESB </a></p>
+        </div>
+
+      </div>
+    </footer>
+
+</mat-sidenav-content> 
+</mat-sidenav-container>

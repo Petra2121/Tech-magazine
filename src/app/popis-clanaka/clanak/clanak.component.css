@@ -1,0 +1,270 @@
+
+  .responsive {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+  }
+  
+  .card:hover {
+    box-shadow: 0 18px 26px 0 rgba(0,0,0,0.2);
+  }
+
+  /*sidenav*/
+  
+  .sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 200px;
+  }
+  /*
+  .sidenav .mat-toolbar {
+    background: inherit;
+  } 
+  */
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .spacer{
+    flex: 1 1 auto;
+  }
+
+  /* footer */
+
+  *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+  }
+
+  a{
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .footer-main-div{
+    position: bottom;
+    bottom:0;
+    right: 0;
+    width:100%;
+    height: auto;
+    margin:auto;
+    background: #f8f9fa;
+    padding:10px 0px;
+   border-top: 1.5px solid #00bcd4;
+  }
+  
+  .footer-social-icons ul{
+    margin:0px;
+    padding:0px;
+    text-align: center;
+  }
+  
+  .footer-social-icons ul li{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 15px 10px;
+    border-radius: 100%;
+    background: #00bcd4;
+  }
+  
+  .footer-social-icons ul li a{
+    color: #272727;
+    font-size: 25px;
+    display: block;
+  }
+  
+  .footer-social-icons ul li a i{
+    line-height: 50px;
+  }
+  
+  .footer-social-icons ul li:hover{
+    background: #176f97;
+  }
+  
+  .footer-social-icons ul li:hover a{
+    color: #fff;
+  }
+  
+  .footer-menu-one{
+    width:100%;
+    height: auto;
+    margin: auto;
+    margin-top: 18px;
+  }
+  
+  .footer-menu-one ul{
+    margin:0px;
+    padding:0px;
+    text-align:center;
+  }
+  
+  .footer-menu-one ul li{
+    display: inline-block;
+    margin: 0px 15px;
+  }
+  
+  .footer-menu-one ul li a{
+    font-family: arial;
+    font-size: 15px;
+    font-weight: 600;
+    color: #00bcd4;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .footer-menu-one ul li a:hover{
+    color:#176f97;
+  }
+  
+  .footer-menu-two{
+    width:100%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-menu-two ul{
+    margin:0px;
+    padding:0px;
+    text-align:center;
+  }
+  
+  .footer-menu-two ul li{
+    display: inline-block;
+    margin: 0px 15px;
+  }
+  
+  .footer-menu-two ul li a{
+    font-family: arial;
+    font-size: 14px;
+    font-weight: 600;
+    color: #00bcd4;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .footer-menu-two ul li a:hover{
+    color:#176f97;
+  }
+  
+  .footer-bottom{
+    bottom: 0;
+    width:100%;
+    height:auto;
+    margin: auto;
+    background: #00bcd4;
+    padding: 0;
+  }
+  
+  .footer-bottom p{
+    font-family:  arial;
+    font-size:14px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  .footer-bottom p a{
+    color:#fff;
+  }
+  
+  .footer-bottom p a:hover{
+    color: #272727;
+  }
+
+  /*NOVI DIO*/
+
+  .row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .side {
+    flex: 50%;
+    background: #fafafa;
+    padding: 20px 7px 40px 40px;
+  }
+
+  /* Main column */
+.main {
+  flex: 50%;
+  background-color: #fafafa;
+  padding: 100px 20px 20px 20px;
+}
+
+img {
+  width: 100%;
+  padding: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+/*nesto moje*/
+h1 { color: black; font-size: 42px; font-family: Verdana, Geneva, Tahoma, sans-serif; padding: 15px 0;}
+
+h2 { color: #176f97; font-size: 21px; font-family: 'Signika', sans-serif; padding: 0px 17px 10px 0px;}
+
+h5 { color: #176f97; font-size: 15px; font-family: 'Signika', sans-serif; padding-bottom: 10px; }
+
+p { 
+  font-family: 'Inder', sans-serif; 
+  line-height: 28px;  
+  color: #666; 
+  padding-left: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+
+}
+.bottom {
+  padding-bottom: 15px;
+  border-bottom: 3px solid #666;
+}
+
+
+.date { float: left }
+
+.opisslike { float: right; padding-right: 20px;}
+
+.author { float: right }
+
+.entry-content {  
+  padding: 0 0 0 0; 
+  margin-bottom: 12px; }
+
+/*KOMENTARI*/
+
+.kom1 {
+  font-size: 20px;
+  color: #176f97;
+  background-color: white;
+  width: 100%;
+  border: 2px solid #176f97;
+  border-bottom: 0px;
+  padding: 10px 0px 10px 10px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+.kom2 {
+  font-size: 15px;
+  color: #666;
+  background-color: white;
+  width: 100%;
+  border: 2px solid #176f97;
+  border-top: 0px;
+  padding: 0px 10px 10px 10px;
+  margin-top: 0px;
+
+}
+
+.kom-naz{
+  padding: 20px 5px 10px 5px;
+}
+

@@ -1,0 +1,128 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<mat-sidenav-container class="sidenav-container">
+
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]=" false">
+      
+      <mat-toolbar color="primary">Menu</mat-toolbar>
+
+      <mat-nav-list>
+        <a mat-list-item href="#">O nama</a>
+        <hr>
+        <a mat-list-item href="#">Naslovna</a>
+        <hr>
+        <a mat-list-item href="#">TEME:</a>
+        <a mat-list-item (click)="novaKomponenta(Smartphones)">&nbsp; &nbsp; Smartphones</a>
+        <a mat-list-item (click)="novaKomponenta(c)">&nbsp; &nbsp;Virtual Reality</a>
+        <a mat-list-item (click)="novaKomponenta(b)">&nbsp; &nbsp;Artificial Intelligence</a>
+        <a mat-list-item (click)="novaKomponenta(d)">&nbsp; &nbsp;Software</a>
+        <hr>
+        <a mat-list-item href="#">Istaknuti događaji</a>
+        <a mat-list-item href="#">Kontakt</a>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content> 
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span  style="font-size: 32px; padding-left:450px; 
+        text-transform: uppercase; font-family: 'Courier New', Courier, monospace; font-weight:bold; letter-spacing: 4px;">
+        Tech Časopis</span>
+        <span class="spacer"></span>
+
+        a = 3
+
+
+
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="Prijava()"
+          *ngIf ="!username">
+          <mat-icon aria-label="Side nav toggle icon">account_circle</mat-icon></button>
+
+          <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="Odjava()"
+          *ngIf ="username">
+          <mat-icon aria-label="Side nav toggle icon">power_settings_new</mat-icon> </button>
+      </mat-toolbar>
+    
+      <!-- Add Content Here -->
+      <ng-content></ng-content>
+
+      <div class="row" class="responsive">
+        <div class="column">
+          
+            <img  (click)="novaKomponenta(a)" src="https://attachments.office.net/owa/Ivan.Levanic.00%40fesb.hr/service.svc/s/GetAttachmentThumbnail?id=AAMkADI3ODMxNDVlLTJmYzgtNDY0Ni1hZDJhLWZmMzczNGE5OGUxZQBGAAAAAAAd325F7kQnSZxxBJgwhS%2ByBwDdE5jAdKb6R4nUOjb0%2FeNLAAAAAAEJAADdE5jAdKb6R4nUOjb0%2FeNLAAJOdoxrAAABEgAQAO99UJ4CwUlJlv6Tosydga8%3D&thumbnailType=2&owa=outlook.office.com&scriptVer=2020011305.09&X-OWA-CANARY=rBvviGera0u4JO1bFH08j4BdxmX6ndcYHveLxdjgiT7Daf3bTZiF4Eu4rDoZaQjrvjmhcVvCHaE.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjU2MzU4ODUyMzRCOTI1MkRERTAwNTc2NkQ5RDlGMjc2NTY1RjYzRTIiLCJ4NXQiOiJWaldJVWpTNUpTM2VBRmRtMmRueWRsWmZZLUkiLCJ0eXAiOiJKV1QifQ.eyJvcmlnaW4iOiJodHRwczovL291dGxvb2sub2ZmaWNlLmNvbSIsInZlciI6IkV4Y2hhbmdlLkNhbGxiYWNrLlYxIiwiYXBwY3R4c2VuZGVyIjoiT3dhRG93bmxvYWRAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4IiwiaXNzcmluZyI6IldXIiwiYXBwY3R4Ijoie1wibXNleGNocHJvdFwiOlwib3dhXCIsXCJwcmltYXJ5c2lkXCI6XCJTLTEtNS0yMS0xNzg1NzM2Mjk1LTMyNjcyMDM0MjYtMzEyMTM4ODY4Ny0xNTA4ODEwOVwiLFwicHVpZFwiOlwiMTE1MzkwNjY2MTE3NjY1NzIyM1wiLFwib2lkXCI6XCI4ODc1MjNkMS02ZGM2LTQ2N2YtYjM0NC03NWRmMGE5ZTc4YzNcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU3OTU2MDI2MywiZXhwIjoxNTc5NTYwODYzLCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4IiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnRzLm9mZmljZS5uZXRAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4In0.bK18annMJD5sCPe0kxzmgrLfBK9-2IpphsO0kwUpRqOOxXcruZqyARESBrSG7xb7wEWX7pWCKrVsndOBdjGuYG1wF6kMifytlqlGYZAOmuGXkY_FC3QGEQm9T9KZfLVXbS_MTHPwPut0wydgXWdN7wXnNWHGiBPETf5FQyRZKIi4A05Usoi_BIA4ajfd0nBSjYAx3TWBQtYJLp1XmieI9FvZWKRqC9Gh1p2Ed0PC79XhBtUeMj4dK7ydr38lvUtzvvVjkv4dturIYfb72I-vDDlhw1LNs8Znt1QOfLFY9uk-I2-m8gc1HkSorBl2BwaEw3U20v1cahfN5HLlGC5q3w&animation=true" height="300px" width ="400px">
+          
+          
+            <img (click)="novaKomponenta(b)" src="https://attachments.office.net/owa/Ivan.Levanic.00%40fesb.hr/service.svc/s/GetAttachmentThumbnail?id=AAMkADI3ODMxNDVlLTJmYzgtNDY0Ni1hZDJhLWZmMzczNGE5OGUxZQBGAAAAAAAd325F7kQnSZxxBJgwhS%2ByBwDdE5jAdKb6R4nUOjb0%2FeNLAAAAAAEMAADdE5jAdKb6R4nUOjb0%2FeNLAAJOdjZUAAABEgAQAMjiAIc0ij5ItiT3D5DeIX0%3D&thumbnailType=2&owa=outlook.office.com&scriptVer=2020010602.11&X-OWA-CANARY=IpAtDe6ZDUyLy5RgyzYfljDLVUePl9cYCMtLvh-qvfG1O6jxIOS1CCSiurs_0C0BJ-j_nCNi4FE.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjU2MzU4ODUyMzRCOTI1MkRERTAwNTc2NkQ5RDlGMjc2NTY1RjYzRTIiLCJ4NXQiOiJWaldJVWpTNUpTM2VBRmRtMmRueWRsWmZZLUkiLCJ0eXAiOiJKV1QifQ.eyJvcmlnaW4iOiJodHRwczovL291dGxvb2sub2ZmaWNlLmNvbSIsInZlciI6IkV4Y2hhbmdlLkNhbGxiYWNrLlYxIiwiYXBwY3R4c2VuZGVyIjoiT3dhRG93bmxvYWRAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4IiwiaXNzcmluZyI6IldXIiwiYXBwY3R4Ijoie1wibXNleGNocHJvdFwiOlwib3dhXCIsXCJwcmltYXJ5c2lkXCI6XCJTLTEtNS0yMS0xNzg1NzM2Mjk1LTMyNjcyMDM0MjYtMzEyMTM4ODY4Ny0xNTA4ODEwOVwiLFwicHVpZFwiOlwiMTE1MzkwNjY2MTE3NjY1NzIyM1wiLFwib2lkXCI6XCI4ODc1MjNkMS02ZGM2LTQ2N2YtYjM0NC03NWRmMGE5ZTc4YzNcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU3ODg1NDQ3NiwiZXhwIjoxNTc4ODU1MDc2LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4IiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnRzLm9mZmljZS5uZXRAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4In0.LSUQqyIy03abzeS7v9gh2CaowN9RGKTfWinR291iHUspWtoXZIf6OAXsB1ALB1YBhILwHqxC4EAtalwfFQYsjxXE_3Zoq4kSwxUU2nCBR6CULnYJs77k8nibWQHXJYShWBd7jojspRyDUfPKvQ5jNQc-wNiViyujqSyciivDVKlWqUbCo2XrNCJ07YVipBUqtyTsF7piBEL-4NtQxJa3UikRh9YjZkVpx3F1PKg3GnT9gufywhpImt8L2mGmxIV1azWVZ2f50ljIPl_6ojS-0r0ph3sr4JrN2OmLhN9wG_tDTfdiSayAQOUXeFS40Eo-uft40hbHe8seHLoGDCFAuQ&animation=true" height="300px" width ="400px">
+          
+        </div>
+        <div class="column">
+          
+            <img  (click)="novaKomponenta(c)"src="https://attachments.office.net/owa/Ivan.Levanic.00%40fesb.hr/service.svc/s/GetAttachmentThumbnail?id=AAMkADI3ODMxNDVlLTJmYzgtNDY0Ni1hZDJhLWZmMzczNGE5OGUxZQBGAAAAAAAd325F7kQnSZxxBJgwhS%2ByBwDdE5jAdKb6R4nUOjb0%2FeNLAAAAAAEMAADdE5jAdKb6R4nUOjb0%2FeNLAAJOdjZVAAABEgAQAO8llchAyeZElV1J76o8zV8%3D&thumbnailType=2&owa=outlook.office.com&scriptVer=2020010602.11&X-OWA-CANARY=zSdl8mx9ZUuhhSVZL8OfzwAmKYmQl9cYmZcMTJT7Y6SZc0bG4sXQC0rlflVSR9kypq8CsQ8NO8s.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjU2MzU4ODUyMzRCOTI1MkRERTAwNTc2NkQ5RDlGMjc2NTY1RjYzRTIiLCJ4NXQiOiJWaldJVWpTNUpTM2VBRmRtMmRueWRsWmZZLUkiLCJ0eXAiOiJKV1QifQ.eyJvcmlnaW4iOiJodHRwczovL291dGxvb2sub2ZmaWNlLmNvbSIsInZlciI6IkV4Y2hhbmdlLkNhbGxiYWNrLlYxIiwiYXBwY3R4c2VuZGVyIjoiT3dhRG93bmxvYWRAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4IiwiaXNzcmluZyI6IldXIiwiYXBwY3R4Ijoie1wibXNleGNocHJvdFwiOlwib3dhXCIsXCJwcmltYXJ5c2lkXCI6XCJTLTEtNS0yMS0xNzg1NzM2Mjk1LTMyNjcyMDM0MjYtMzEyMTM4ODY4Ny0xNTA4ODEwOVwiLFwicHVpZFwiOlwiMTE1MzkwNjY2MTE3NjY1NzIyM1wiLFwib2lkXCI6XCI4ODc1MjNkMS02ZGM2LTQ2N2YtYjM0NC03NWRmMGE5ZTc4YzNcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU3ODg1NTA3OSwiZXhwIjoxNTc4ODU1Njc5LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4IiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnRzLm9mZmljZS5uZXRAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4In0.hXG2w0TGYgb28LSr0SCh1BJbT3yEcccG7iNa44o0MAXfEcVjskFSY-FHbsq5jM735ZunFNQK-ooJnHYU16Cxa_ws0exP2m9NgO_4dhaM3RNFy5E47yOtAE6_BYvW8J3ps59q8aXAutTv3898TBIYsVfhcPqZqYoj98gdrYwOvbjKscBSanbb2WmTh34Uzbsu4cXBwqMMRimM7wIpUZg1t7TUlDEkDEvtlqgARS3a_ITVI_xsTP2Cg9Sp-kQWIAX03TM7-SGH60hkJdGUPFWSQ0dZAkbdAZJID1Ou1cqZzbMxhhSnSOuwdBIBZcYraVDlsaUGLkLKmLZMS8yZKvtFVw&animation=true" height="300px" width ="400px">
+          
+          
+            <img (click)="novaKomponenta(d)" src="https://attachments.office.net/owa/Ivan.Levanic.00%40fesb.hr/service.svc/s/GetAttachmentThumbnail?id=AAMkADI3ODMxNDVlLTJmYzgtNDY0Ni1hZDJhLWZmMzczNGE5OGUxZQBGAAAAAAAd325F7kQnSZxxBJgwhS%2ByBwDdE5jAdKb6R4nUOjb0%2FeNLAAAAAAEMAADdE5jAdKb6R4nUOjb0%2FeNLAAJOdjZUAAABEgAQACWbCyBkDydCqXqHxiIhgDA%3D&thumbnailType=2&owa=outlook.office.com&scriptVer=2020010602.11&X-OWA-CANARY=bgvq3gTlnUCNZMPZDvwZeZBKMUmPl9cYAyivWX1cgTWepE37oxZ2vzWrVSNLNXoL0QpRY93G4ZQ.&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjU2MzU4ODUyMzRCOTI1MkRERTAwNTc2NkQ5RDlGMjc2NTY1RjYzRTIiLCJ4NXQiOiJWaldJVWpTNUpTM2VBRmRtMmRueWRsWmZZLUkiLCJ0eXAiOiJKV1QifQ.eyJvcmlnaW4iOiJodHRwczovL291dGxvb2sub2ZmaWNlLmNvbSIsInZlciI6IkV4Y2hhbmdlLkNhbGxiYWNrLlYxIiwiYXBwY3R4c2VuZGVyIjoiT3dhRG93bmxvYWRAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4IiwiaXNzcmluZyI6IldXIiwiYXBwY3R4Ijoie1wibXNleGNocHJvdFwiOlwib3dhXCIsXCJwcmltYXJ5c2lkXCI6XCJTLTEtNS0yMS0xNzg1NzM2Mjk1LTMyNjcyMDM0MjYtMzEyMTM4ODY4Ny0xNTA4ODEwOVwiLFwicHVpZFwiOlwiMTE1MzkwNjY2MTE3NjY1NzIyM1wiLFwib2lkXCI6XCI4ODc1MjNkMS02ZGM2LTQ2N2YtYjM0NC03NWRmMGE5ZTc4YzNcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwifSIsIm5iZiI6MTU3ODg1NDQ3NiwiZXhwIjoxNTc4ODU1MDc2LCJpc3MiOiIwMDAwMDAwMi0wMDAwLTBmZjEtY2UwMC0wMDAwMDAwMDAwMDBAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4IiwiYXVkIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2F0dGFjaG1lbnRzLm9mZmljZS5uZXRAY2I3MWM0YTEtNzlkMy00ZWQ3LWI5YTMtMThiMzU5MmQ3MWM4In0.LSUQqyIy03abzeS7v9gh2CaowN9RGKTfWinR291iHUspWtoXZIf6OAXsB1ALB1YBhILwHqxC4EAtalwfFQYsjxXE_3Zoq4kSwxUU2nCBR6CULnYJs77k8nibWQHXJYShWBd7jojspRyDUfPKvQ5jNQc-wNiViyujqSyciivDVKlWqUbCo2XrNCJ07YVipBUqtyTsF7piBEL-4NtQxJa3UikRh9YjZkVpx3F1PKg3GnT9gufywhpImt8L2mGmxIV1azWVZ2f50ljIPl_6ojS-0r0ph3sr4JrN2OmLhN9wG_tDTfdiSayAQOUXeFS40Eo-uft40hbHe8seHLoGDCFAuQ&animation=true" height="300px" width ="400px">
+          
+        </div>
+      
+        
+
+      </div>
+   
+      <!--footer-->
+    <footer>
+      <div class="footer-main-div" >
+        <div class="footer-social-icons">
+          <ul>
+            <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-snapchat-ghost"></i></a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-menu-one" >
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-menu-two">
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Media</a></li>
+          </ul>
+        </div>
+      
+        <div class="footer-bottom">
+          <p> Sponsored by: <a href="https://www.fesb.unist.hr/"> FESB </a></p>
+        </div>
+
+      </div>
+      </footer>
+
+  </mat-sidenav-content> 
+</mat-sidenav-container>
